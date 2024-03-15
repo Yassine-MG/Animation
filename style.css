@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section-I{
+    width: 100%;
+    height: 100vh;
+    background-color: #0a0449;
+}
+.image-I{
+    width: 30%;
+    transition: opacity 0.5s;
+}
+.div-I{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+}
+.image-I-cercle{
+    position: absolute;
+    height: 76px;
+    top: 0px;
+    left: 274px;
+    opacity: 1;
+    cursor: pointer; /* Optional: indicates an interactive element */
+    transition: opacity 0.5s;
+    z-index: 2;
+}
+.container-pi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.additional-circle {
+    position: absolute;
+    width: 76px; /* The width should be the same as the height of .image-I-cercle */
+    height: 76px; /* Assuming this is the size you want */
+    background-size: cover;
+    top: 0px;
+    left: 274px; /* Start below the viewable area */
+    opacity: 1;
+    transition: all 0.5s; /* Transition for smooth animation */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.additional-circle > p {
+    font-size: 13px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+/* Position your circles accordingly with left or right property */
+
+.additional-circle-1{
+    background-image: url(./blue\ cercle.png);
+}
+.additional-circle-2{
+    background-image: url(./blue-cercle.png);
+}
+.additional-circle-3{
+    background-image: url(./greencercle.png);
+}
+.additional-circle-4{
+    background-image: url(./pink\ cercle.png);
+}
+/* Position your circles accordingly with left or right property */
+.image-I-cercle:hover ~ .additional-circle-1 {
+    top: -210px;
+    left: 50px; 
+}
+
+.image-I-cercle:hover ~ .additional-circle-2 {
+    top: -210px;
+    left: 500px;
+}
+
+.image-I-cercle:hover ~ .additional-circle-3 {
+    top: -210px;
+    
+    left: 200px;
+}
+
+.image-I-cercle:hover ~ .additional-circle-4 {
+    top: -210px;
+    left: 350px;
+}
+
+
+.image-I-cercle:hover ~ .additional-circle {
+    bottom: 10px; 
+    opacity: 1;
+}
+
+
+.image-I-cercle:hover ~ .additional-circle{
+    width: 100px; /* The width should be the same as the height of .image-I-cercle */
+    height: 100px;
+}
